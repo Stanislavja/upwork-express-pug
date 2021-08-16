@@ -12,20 +12,26 @@ body
     div#container
         each book, index in bookStore
             if index
-                ul.hidden
-                    li= book.title
-                    li= book.author
-                    li= book.pages
-                    li= book.year
-                    if book.popup
-                        li.popup= book.popup
+                div.flex.hidden
+                    ul
+                        li= book.title
+                        li= book.author
+                        li= book.pages
+                        li= book.year
+                        if book.popup
+                            li.popup= book.popup
+                        li.points=book.points
+                    input(type='checkbox')
             else
-                ul
-                    li= book.title
-                    li= book.author
-                    li= book.pages
-                    li= book.year
-                    if book.popup
-                        li.popup= book.popup
+                div.flex
+                    ul
+                        li= book.title
+                        li= book.author
+                        li= book.pages
+                        li= book.year
+                        if book.popup
+                            li.popup= book.popup
+                        li.points=book.points
+                    input(type='checkbox')
     script
         include ./script.js

@@ -1,3 +1,9 @@
 .hidden {
+    display: none !important;
+}
+.flex {
+    display: flex;
+}
+.modal input {
     display: none;
 }

@@ -9,7 +9,7 @@ modal.addEventListener('hide.bs.modal', () => {
 });
 
 button.addEventListener('click', () => {
-  const item = container.querySelector('ul.hidden');
+  const item = container.querySelector('div.hidden');
   const message = item.querySelector('li.popup');
 
   item.classList.remove('hidden');
@@ -18,4 +18,17 @@ button.addEventListener('click', () => {
     modalMessage.appendChild(item.cloneNode(true));
     modalInst.show();
   }
+});
+
+container.addEventListener('click', (e) => {
+  let total = 0;
+  const target = e.target;
+
+  if (target.hasAttribute('type')) {
+    container.querySelectorAll('input[type=checkbox]:checked').forEach((item) => {
+      total += parseInt(item.previousSibling.querySelector('.points').textContent, 10);
+    });
+  }
+
+  localStorage.setItem('totalPoints', total);
 });

@@ -54,20 +54,23 @@ app.get("/bookstore2", function (req, res) {
       title: "Templating with Pug",
       author: "Winston Smith",
       pages: 143,
-      year: 2017
+      year: 2017,
+      points: 1
     },
     {
       title: "Node.js will help",
       author: "Guy Fake",
       pages: 879,
-      year: 2015
+      year: 2015,
+      points: 11
     },
     {
       title: "React.js is awesome",
       author: "Facebook team",
       pages: 1666,
       year: 2014,
-      popup: "Is it popup message?"
+      popup: "Is it popup message?",
+      points: 22
     }
   ];
 
